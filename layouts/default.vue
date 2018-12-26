@@ -35,6 +35,7 @@
         @click="drawer = !drawer" 
       />
       <v-btn
+        class="hidden-sm-and-down"
         icon
         @click.stop="miniVariant = !miniVariant"
       >
@@ -60,6 +61,30 @@
         v-text="title" 
       />
       <v-spacer />
+      <v-btn icon>
+        <v-icon 
+          color="primary"
+          to="/Dashboard"
+        >home</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon 
+          color="primary"
+          to="/Dashboard"
+        >email</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon 
+          color="primary"
+          to="/Dashboard"
+        >phone</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon 
+          color="primary"
+          to="/Dashboard"
+        >settings_cell</v-icon>
+      </v-btn>
       <v-btn
         icon
         color="primary"
@@ -138,7 +163,7 @@ export default {
       drawer: true,
       fixed: false,
       items: [
-        { icon: 'apps', title: 'Overview', to: '/Overview' },
+        { icon: 'dashboard', title: 'Dashboard', to: '/Dashboard' },
         { icon: 'attach_money', title: 'Billing & Payments', to: '/Billing' },
         { icon: 'wifi', title: 'My Services', to: '/Services' },
         { icon: 'exit_to_app', title: 'Sign Out', to: '/' }
@@ -153,13 +178,13 @@ export default {
         'Fiber Home',
         'Fiber Technology',
         'Plans and Prices',
-        'Coverage Area',
+        'Coverage Areas',
         'Contact Us'
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'USI MyFiber Portal'
+      title: 'MyFiber Portal'
     }
   }
 }

@@ -10,11 +10,11 @@
       <v-flex
         d-block
         xs12 
-        sm6
-        md6
-        lg6
+        sm12
+        md8
+        lg8
       >
-        <v-card>
+        <v-card flat>
           <v-toolbar 
             card 
             dense 

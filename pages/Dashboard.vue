@@ -14,7 +14,7 @@
         md12
         lg8
       >
-        <v-card>
+        <v-card flat>
           <v-toolbar 
             card 
             dense 
@@ -49,13 +49,6 @@
           </v-list>
         </v-card>
       </v-flex>
-      <!-- <v-flex 
-        d-block 
-        xs6
-        md3 
-        lg3
-      >
-      </v-flex> -->
     </v-layout>
   </v-container>
 </template>

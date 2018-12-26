@@ -3,7 +3,7 @@
     grid-list-xl 
     fluid
   >
-    To make a payment on a balance due, please &nbsp;<router-link to="/CreditCard"> update your Credit Card.</router-link>
+    To make a payment on a balance due, please <router-link to="/CreditCard"> update your Credit Card.</router-link>
     <v-layout
       row
       wrap
@@ -14,7 +14,7 @@
         md12
         lg6
       >
-        <v-card>
+        <v-card flat>
           <!-- <v-subheader></v-subheader> -->
           <v-toolbar
             card 
@@ -22,7 +22,7 @@
             flat
             color="secondary"
           >
-            <v-toolbar-title class="white--text">Invoice: <router-link to="/invoice">{{ invoiceNumber }}</router-link></v-toolbar-title>
+            <v-toolbar-title class="white--text">Invoice: <router-link :to="`/invoice/${invoiceNumber}`">{{ invoiceNumber }}</router-link></v-toolbar-title>
           </v-toolbar>
           <v-list 
             two-line
@@ -32,18 +32,16 @@
               <v-list-tile
                 avatar
               >
-                <v-list-tile-action>
-                  <v-icon>attach_money</v-icon>
-                </v-list-tile-action>
 
                 <v-list-tile-content>
-                  <v-list-tile-title>Total Charges:</v-list-tile-title>
+                  <v-list-tile-title>Service</v-list-tile-title>
                 </v-list-tile-content>
 
                 <v-list-tile-avatar>
-                  $49.95
+                  Cost
                 </v-list-tile-avatar>
               </v-list-tile>
+              <v-divider />
             </v-list>
             <v-list>
               <v-list-tile
@@ -64,6 +62,21 @@
                 </v-list-tile-avatar>
               </v-list-tile>
             </v-list>
+            <v-divider />
+            <v-list>
+              <v-list-tile
+                avatar
+              >
+
+                <v-list-tile-content>
+                  <v-list-tile-title>Total Charges</v-list-tile-title>
+                </v-list-tile-content>
+
+                <v-list-tile-avatar>
+                  $44.90
+                </v-list-tile-avatar>
+              </v-list-tile>
+            </v-list>
           </v-list>
         </v-card>
       </v-flex>
@@ -73,7 +86,7 @@
         md12
         lg6
       >
-        <v-card>
+        <v-card flat>
           <v-toolbar
             card 
             dense 
@@ -111,7 +124,7 @@
         md12
         lg6
       >
-        <v-card>
+        <v-card flat>
           <v-toolbar
             card 
             dense 

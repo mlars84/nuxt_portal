@@ -9,12 +9,11 @@
     >
       <v-flex
         d-block
-        xs12 
-        sm6
-        md6
+        sm12
+        md12
         lg6
       >
-        <v-card>
+        <v-card flat>
           <v-toolbar 
             card 
             dense 
@@ -37,9 +36,6 @@
 
               <v-list-tile-content>
                 <v-list-tile-title v-text="service.type" />
-              </v-list-tile-content>
-              <v-list-tile-content>
-                <v-list-tile-title v-text="service.price" />
               </v-list-tile-content>
               <v-list-tile-avatar>
                 {{ service.price }}

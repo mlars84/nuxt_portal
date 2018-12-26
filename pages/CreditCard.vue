@@ -12,9 +12,9 @@
         xs12
         sm12
         md12
-        lg6
+        lg8
       >
-        <v-card>
+        <v-card flat>
           <v-toolbar 
             card 
             dense 
@@ -34,7 +34,30 @@
           </v-toolbar>
           <v-card-text v-if="editMode">
             <v-flex>
-              <v-subheader>Expiry Date</v-subheader>
+              <v-list>
+                <v-toolbar flat>
+                  <v-toolbar-title>Current Card On File:</v-toolbar-title>
+                </v-toolbar>
+                <v-list-tile>
+                  <v-list-tile-content>
+                    <v-list-tile-title>Card Type</v-list-tile-title>
+                    <v-list-tile-sub-title>Visa</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-content>
+                    <v-list-tile-title>Card Number</v-list-tile-title>
+                    <v-list-tile-sub-title>####-####-####-5164</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile>
+                  <v-list-tile-content>
+                    <v-list-tile-title>Expiry Date</v-list-tile-title>
+                    <v-list-tile-sub-title>05/21</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+              <v-subheader>Update Expiry Date</v-subheader>
               <v-date-picker 
                 v-model="picker" 
                 landscape="landscape"
