@@ -10,8 +10,9 @@
       <v-flex 
         d-block 
         xs12
+        sm12
         md12
-        lg6
+        lg8
       >
         <v-card>
           <v-toolbar 

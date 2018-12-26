@@ -10,11 +10,11 @@
     >
       <v-flex
         d-block
-        sm-6
-        md-6
-        lg-12
+        sm12
+        md12
+        lg6
       >
-        <v-card flat>
+        <v-card>
           <!-- <v-subheader></v-subheader> -->
           <v-toolbar
             card 
@@ -69,11 +69,11 @@
       </v-flex>
       <v-flex
         d-block
-        sm-6
-        md-6
-        lg-12
+        sm12
+        md12
+        lg6
       >
-        <v-card flat>
+        <v-card>
           <v-toolbar
             card 
             dense 
@@ -107,11 +107,11 @@
       </v-flex>
       <v-flex
         d-block
-        sm-6
-        md-6
-        lg-12
+        sm12
+        md12
+        lg6
       >
-        <v-card flat>
+        <v-card>
           <v-toolbar
             card 
             dense 
@@ -120,7 +120,7 @@
           >
             <v-toolbar-title class="white--text">Recent Payments</v-toolbar-title>
           </v-toolbar>
-          <p v-if="!payments.length">You have made no recent payments to this account.</p>
+          <v-card-text v-if="!payments.length">You have made no recent payments to this account.</v-card-text>
           <v-card-actions>
             <v-btn 
               flat

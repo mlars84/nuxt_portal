@@ -59,6 +59,7 @@
         class="primary--text" 
         v-text="title" 
       />
+      <v-spacer />
       <v-btn
         icon
         color="primary"
@@ -97,10 +98,34 @@
     </v-navigation-drawer>
     <v-footer
       :fixed="fixed"
-      app
+      height="auto"
       color="primary"
     >
-      <span class="pl-2 white--text">&copy; US Internet 2018</span>
+      <v-layout
+        justify-center
+        row
+        wrap
+      >
+        <v-btn
+          v-for="link in links"
+          :key="link"
+          color="white"
+          flat
+          round
+        >
+          {{ link }}
+        </v-btn>
+        <v-flex
+          primary
+          lighten-1
+          py-1
+          text-xs-center
+          white--text
+          xs12
+        >
+          &copy;2018 — <strong>US Internet</strong>
+        </v-flex>
+      </v-layout>
     </v-footer>
   </v-app>
 </template>
@@ -119,10 +144,17 @@ export default {
         { icon: 'exit_to_app', title: 'Sign Out', to: '/' }
       ],
       actions: [
-        { icon: 'apps', title: 'Change Password', to: '/Password' },
+        { icon: 'lock', title: 'Change Password', to: '/Password' },
         { icon: 'credit_card', title: 'Update Credit Card', to: '/CreditCard' },
         { icon: 'mail', title: 'Email preferences', to: '/EmailPreferences' },
         { icon: 'contact_support', title: 'Support Tickets', to: '/Support' }
+      ],
+      links: [
+        'Fiber Home',
+        'Fiber Technology',
+        'Plans and Prices',
+        'Coverage Area',
+        'Contact Us'
       ],
       miniVariant: false,
       right: true,
